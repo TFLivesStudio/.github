@@ -1,7 +1,5 @@
 <div align="center">
-  <a href="https://www.tflives.com/">
     <img src="https://raw.githubusercontent.com/TFLivesStudio/.github/main/assets/hero.svg" width="100%" alt="TFLives Studio. Built from curiosity. Creating digital experiences and communities." />
-  </a>
 </div>
 
 <br/>
