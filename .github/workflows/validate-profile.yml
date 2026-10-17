@@ -1,0 +1,28 @@
+name: Validate organization profile
+
+on:
+  push:
+    paths:
+      - "profile/README.md"
+      - "assets/**"
+      - ".github/scripts/validate_profile.py"
+      - ".github/workflows/validate-profile.yml"
+  pull_request:
+    paths:
+      - "profile/README.md"
+      - "assets/**"
+      - ".github/scripts/validate_profile.py"
+      - ".github/workflows/validate-profile.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Verify SVG and image references
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out organization profile
+        uses: actions/checkout@v4
+      - name: Check SVG XML and README links
+        run: python3 .github/scripts/validate_profile.py
